@@ -59,7 +59,7 @@ JSON-Serializer:
 * output: about 2.4 MB 
 * scheduler utilization:  20-30 %
 
-![JSON-Serializer](https://github.com/zookzook/binary_ws/raw/json.png "JSON-Serializer")
+![JSON-Serializer](https://github.com/zookzook/binary_ws/raw/master/json.png "JSON-Serializer")
 
 BERT-Serializer:
 
@@ -67,7 +67,7 @@ BERT-Serializer:
 * Output: about 2.8 MB Output
 * Scheduler utilization: 15-20 %
 
-![BERT-Serializer](https://github.com/zookzook/binary_ws/raw/bert.png "BERT-Serializer")
+![BERT-Serializer](https://github.com/zookzook/binary_ws/raw/master/bert.png "BERT-Serializer")
 
 
  ## Credits
