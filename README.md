@@ -2,7 +2,7 @@
 
 This is a demo application for [Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view) that uses BERT (Binary ERlang Term) serialization instead of JSON serialization for server-client communication.
 
-The basic idea is to use `:erlang.term_to_binary/1` and `:erlang.binary_to_term/2`, so that the serialization is done as fast as possible. The browser/client uses a BERT serializer in JavaScript instead of the `JSON.stringify()` and the `JSON.parse()` function. This is not as fast as the JSON serialization, but the server can use optimized functions (written in C) now. This reduces the load on the server and the client has to work a little more. As a result, the websocket message is processed faster and the server can handle more push events.
+The basic idea is to use `:erlang.term_to_binary/1` and `:erlang.binary_to_term/2`, so that the serialization is done as fast as possible. The browser/client uses a BERT serializer in JavaScript instead of the `JSON.stringify()` and the `JSON.parse()` function. This is not as fast as the JSON serialization, but the server can use optimized functions (written in C) now. This reduces the load on the server and the client has to work a little more. As a result, the WebSocket message is processed faster and the server can handle more push events.
 
 # What is to be done?
 
