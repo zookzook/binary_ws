@@ -4,7 +4,7 @@ export function encode(msg, callback){
     let payload = [
         msg.join_ref, msg.ref, msg.topic, msg.event, msg.payload
     ];
-    return callback(JSON.stringify(payload))
+    return callback(bert.to_byte_array(bert.encode(payload)))
 }
 
 export function decode(rawPayload, callback) {
