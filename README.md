@@ -23,7 +23,7 @@ the `BERT-Serializer` encodes only the data types known in JSON:
 * Numbers (Integer, Floats)
 * Arrays
 * Maps
-* `null` bzw. `undefined`
+* `null`,  `undefined`
 
 Other data types such as tuples are not expected.
 
