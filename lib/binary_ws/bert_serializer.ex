@@ -27,7 +27,7 @@ defmodule BERTSerializer do
   end
 
   def decode!(raw_message, _opts) do
-    [join_ref, ref, topic, event, payload | _] =:erlang.binary_to_term(raw_message, [:safe])
+    [join_ref, ref, topic, event, payload | _] = Phoenix.json_library().decode!(raw_message)
     %Phoenix.Socket.Message{
       topic: topic,
       event: event,

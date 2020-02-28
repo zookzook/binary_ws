@@ -59,7 +59,7 @@ JSON-Serializer:
 
 ![JSON-Serializer](https://github.com/zookzook/binary_ws/raw/master/json.png "JSON-Serializer")
 
-BERT-Serializer:
+Full-BERT-Serializer:
 
 * Memory usage: about 54 MB
 * Output: about 2.8 MB Output
@@ -67,6 +67,23 @@ BERT-Serializer:
 
 ![BERT-Serializer](https://github.com/zookzook/binary_ws/raw/master/bert.png "BERT-Serializer")
 
+## Security Concerns
+
+The BERT format enables to encode anonymous functions and others, which can open up the server for remote code execution. To avoid this the BERT serialization is only used from server to client. The client sends JSON as usual. The server sends TERM instead of JSON. Running the same benchmark but now only used TERM from server to client:
+
+Half-BERT-Serializer:
+
+* Memory usage: about 56 MB
+* Output: about 2.8 MB Output
+* Scheduler utilization: 15-20 %
+
+![HALF-BERT-Serializer](https://github.com/zookzook/binary_ws/raw/master/half-bert.png "BERT-Serializer")
+
+We got nearly the same results as before.
+
+## Sizes
+
+The factor between the sizes of JSON and TERM depends on the content. If the content contains a lot of characters which need to be escapted then the factor `byte_size(TERM)/byte_size(JSON)` is < 1. With HTML you get a lot of `"` which need to be escaped, so the factor is usually <= 1.
 
  ## Credits
  
